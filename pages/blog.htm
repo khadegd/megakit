@@ -1,5 +1,5 @@
 title = "Blog Articles"
-url = "/blog"
+url = "/blog/:page?"
 layout = "blog-layout"
 description = "The main blog page, with all posts."
 meta_title = "The latest announcements from us"
@@ -7,7 +7,7 @@ is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 10
+postsPerPage = 4
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -25,11 +25,10 @@ function onStart()
 }
 ?>
 ==
-<div class="row">
-    <div class="col-md-8">
-        {% partial 'blog/posts' %}
+<section class="section blog-wrap bg-gray">
+    <div class="container">
+        <div class="row">
+            {% partial 'blog/posts' %}
+        </div>
     </div>
-    <div class="col-md-4">
-        {% partial 'blog/categories' %}
-    </div>
-</div>
+</section>
