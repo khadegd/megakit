@@ -1,14 +1,14 @@
 title = "Blog Category"
 url = "/blog/category/:slug"
-layout = "default"
+layout = "blog-layout"
 description = "Viewing blog posts in a specific category."
-hidden = "0"
 meta_title = "The latest announcements from us"
+is_hidden = 0
 
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"
-postsPerPage = "10"
+postsPerPage = 10
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -16,10 +16,10 @@ postPage = "blog/post"
 
 [blogCategories]
 slug = "{{ :slug }}"
-displayEmpty = "0"
+displayEmpty = 0
 categoryPage = "blog/category"
 ==
-<?
+<?php
 function onStart()
 {
     $this['bannerImage'] = $this->themeUrl('assets/images/blog-banner.jpg');
