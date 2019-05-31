@@ -25,11 +25,15 @@ function onEnd()
 }
 ?>
 ==
-<div class="row">
-    <div class="col-md-8">
-        {% component 'blogPost' %}
+<section class="section blog-wrap bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% component 'blogPost' %}
+            </div>
+            <div class="col-md-4">
+                {% partial 'blog/categories' %}
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        {% partial 'blog/categories' %}
-    </div>
-</div>
+</section>
