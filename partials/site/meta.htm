@@ -4,22 +4,24 @@ description = "Meta Partial"
 {##}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+{# Meta Tags #}
 <meta name="description" content="{{ this.page.meta_description }}">
 <meta name="title" content="{{ this.page.meta_title }}">
-  
 <meta name="author" content="themefisher.com">
-
+{# PageTitle #}
 <title>{{ this.page.title }} :: Html5 Agency template</title>
-
+{# Favicon #}
 <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
-
+{# CSS #}
 <link href="{{ [
   'assets/plugins/bootstrap/css/bootstrap.min.css',
   'assets/plugins/themify/css/themify-icons.css',
   'assets/plugins/fontawesome/css/all.css',
   'assets/plugins/magnific-popup/dist/magnific-popup.css',
   'assets/plugins/slick-carousel/slick/slick.css',
-  'assets/plugins/slick-carousel/slick/slick-theme.css',
-  'assets/css/style.css'
+  'assets/plugins/slick-carousel/slick/slick-theme.css'
+]|theme }}" rel="stylesheet">
+{# Style SCSS #}
+<link href="{{ [
+  'assets/scss/style.scss'
 ]|theme }}" rel="stylesheet">
