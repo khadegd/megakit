@@ -26,11 +26,10 @@ function onStart()
 }
 ?>
 ==
-<div class="row">
-    <div class="col-md-8">
-        {% partial 'blog/posts' %}
+<section class="section blog-wrap bg-gray">
+    <div class="container">
+        <div class="row">
+            {% partial 'blog/posts' %}
+        </div>
     </div>
-    <div class="col-md-4">
-        {% partial 'blog/categories' %}
-    </div>
-</div>
+</section>
